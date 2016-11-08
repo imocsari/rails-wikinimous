@@ -1,0 +1,7 @@
+<h1>All our articles</h1>
+<% @articles.each do |t|%>
+<p><%=t.title%></p>
+<p><%=t.content%></p>
+<%= link_to "more details", article_path(t) %>
+<%=link_to "delete", article_path(t), method: :delete %>
+<%end%>
